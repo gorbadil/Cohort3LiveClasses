@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 6%;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: space-between;
+  padding: 10px 8%;
+  position: sticky;
+  top: 0;
+}
+
+.linkler {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  width: 20vw;
+}
+
+/* Gallery */
+
+.gallery {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.path {
+  position: relative;
+  width: 250px;
+  /* overflow: hidden; */
+  border: 5px solid transparent;
+}
+
+.path::after {
+  position: absolute;
+  content: "";
+  top: -5%;
+  left: -3%;
+  background-color: hotpink;
+  width: 110%;
+  height: 110%;
+  clip-path: inset(25% 0 25% 0);
+  z-index: -1;
+}
+
+.path:hover::after {
+  /* clip-path: inset(0 0 0 0); */
+  animation: ersin 2s linear infinite;
+}
+
+@keyframes ersin {
+  0% {
+    clip-path: inset(25% 0 25% 0);
+  }
+  50% {
+    clip-path: inset(0% 0 0% 0);
+  }
+  100% {
+    clip-path: inset(25% 0 25% 0);
+  }
+}
