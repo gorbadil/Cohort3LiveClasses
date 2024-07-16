@@ -1,0 +1,16 @@
+{
+  "name": "barking",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tail": "npx tailwindcss -i ./input.css -o ./output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="sticky top-0 bg-white">
+      <nav class="container mx-auto p-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <img src="/public/images/logo.svg" class="w-24" alt="">
+            <p class="text-2xl">Bar<span class="text-brightRed">King</span></p>
+          </div>
+          <div class="md:flex gap-6 hidden">
+            <a href="#" class="hover:text-gray-300" >Pricing</a>
+            <a href="#" class="hover:text-gray-300" >About Us</a>
+            <a href="#" class="hover:text-gray-300" >Careers</a>
+            <a href="#" class="hover:text-gray-300" >Community</a>
+          </div>
+          <button class="block md:hidden hamburger">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section id="hero" class="">
+      <div class="container mx-auto flex flex-col md:flex-row items-center gap-6">
+        <div class="flex flex-col gap-6 w-1/2">
+          <h1 class="text-5xl font-bold">King for the elite service</h1>
+          <p>We can't solve your problems, but we can help you to forget them.</p>
+          <div>
+            <a href="#"
+            class="p-3 px-6 bg-brightRed text-white rounded-full hover:bg-red-500"
+            >Book a Table</a>
+          </div>
+        </div>
+        <div>
+          <img src="/public/images/cocktail.jpg" alt="">
+        </div>
+      </div>
+    </section>
+    <section id="infos" class="bg-gray-100 py-12">
+      <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        <button class="bg-brightRed px-4 py-2 rounded-full text-white hover:bg-red-500">Coctail</button>
+        <button class="bg-brightRed px-4 py-2 rounded-full text-white hover:bg-red-500">Service</button>
+        <button class="bg-brightRed px-4 py-2 rounded-full text-white hover:bg-red-500">Car Park</button>
+        <button class="bg-brightRed px-4 py-2 rounded-full text-white hover:bg-red-500">Live Actions</button>
+      </div>
+    </section>
+  </body>
+</html>
