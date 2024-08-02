@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: red;
+}
+
+.toast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background-color: salmon;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.red,
+.blue,
+.yellow {
+  padding: 50px;
+  margin: 50px;
+  border-radius: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
