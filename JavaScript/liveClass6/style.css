@@ -53,6 +53,10 @@ section {
   cursor: default;
 }
 
+.menu-btn {
+  display: none;
+}
+
 /* .navbar {
   display: flex;
   gap: 4rem;
@@ -566,4 +570,106 @@ textarea:focus {
 
 .footer-icon-top a:hover {
   box-shadow: 0 0 1rem var(--main-color);
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 1.5rem 5%;
+  }
+  section {
+    padding: 4rem 5% 2rem;
+  }
+  .footer {
+    padding: 1rem 3%;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    transform: translateY(-400px);
+  }
+
+  .menu-btn:checked ~ .navbar {
+    display: block;
+    background-color: var(--bg-color);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    padding: 1rem 3%;
+    transition: all 0.3s;
+  }
+
+  .menu-btn:checked ~ .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about-img img {
+    width: 70vw;
+  }
+
+  .services {
+    gap: 4rem;
+  }
+
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact form .input-div input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 40%;
+  }
 }
