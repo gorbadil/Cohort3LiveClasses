@@ -1,14 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import List from "./List";
+import List from "./components/List/List";
+import Inputs from "./components/Inputs/Inputs";
 
 function App() {
-  // const [harcamaAdi, setHarcamaAdi] = useState("");
-  // const [harcamaTutari, setHarcamaTutari] = useState();
-  const [harcama, setHarcama] = useState({
-    isim: "",
-    tutar: "",
-  });
+  const [usernameInput, setUsernameInput] = useState("");
+  const [username, setUsername] = useState("");
+
   const [harcalamalar, setHarcalamalar] = useState([
     {
       isim: "Çiçek",
@@ -19,74 +17,39 @@ function App() {
       tutar: 10,
     },
   ]);
-  const handleClick = () => {
-    setHarcalamalar((prev) => [
-      ...prev,
-      {
-        // isim: harcamaAdi,
-        // tutar: harcamaTutari,
-        isim: harcama.isim,
-        tutar: harcama.tutar,
-      },
-    ]);
-    // setHarcamaAdi("");
-    // setHarcamaTutari("");
-    setHarcama({
-      isim: "",
-      tutar: "",
-    });
+
+  const handleNewUser = () => {
+    setUsername(usernameInput);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setHarcama((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  if (username === "") {
+    return (
+      <>
+        <img src="../public/maxresdefault.jpg" width={300} alt="" />
+        <h3>Adını Yazın</h3>
+        <input
+          type="text"
+          value={usernameInput}
+          onChange={(e) => setUsernameInput(e.target.value)}
+        />
+        <br />
+        <br />
+        <button onClick={handleNewUser}>Yeni Kullanıcı</button>
+      </>
+    );
+  }
 
   return (
     <>
+      <h3>Hoşgeldin {username}</h3>
+
       <h3>Harcama Takip</h3>
-      <p>Harcama Adı</p>
-      <input
-        type="text"
-        name="isim"
-        // value={harcamaAdi}
-        value={harcama.isim}
-        // onChange={(e) => setHarcamaAdi(e.target.value)}
-        onChange={(e) => handleChange(e)}
-      />
-      <br />
-      <p>Harcama Tutarı</p>
-      <input
-        type="number"
-        name="tutar"
-        // value={harcamaTutari}
-        value={harcama.tutar}
-        // onChange={(e) => setHarcamaTutari(e.target.value)}
-        onChange={(e) => handleChange(e)}
-      />
-      {/* <InputComp /> */}
-      <br />
-      <button onClick={handleClick}>Harca</button>
+      <Inputs setHarcalamalar={setHarcalamalar} />
       <hr />
       <h4>Harcamalar</h4>
       <ul>
-        {/* {harcalamalar.map((item, index) => {
-          return (
-            <li key={index}>
-              <span>{item.isim} </span>
-              <span>{item.tutar} TL</span>
-            </li>
-          );
-        })} */}
         {harcalamalar.map((item, index) => (
-          // <li key={index} id={index}>
-          //   <span>{item.isim} </span>
-          //   <span>{item.tutar} TL</span>
-          // </li>
-          <List key={index} item={item} />
+          <List key={`${item.isim}${index}`} item={item} />
         ))}
       </ul>
     </>
