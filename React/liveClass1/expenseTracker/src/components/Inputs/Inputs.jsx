@@ -55,10 +55,10 @@ function Inputs({ setHarcalamalar }) {
       <br />
       <br />
       <button onClick={handleClick} className={alert ? "red" : ""}>
-        Harca
+        {alert ? "Harcama Eklendi" : "Harcama Ekle"}
       </button>
 
-      {alert ? <p>Harcama Eklendi</p> : <p>Harcama Ekle</p>}
+      {/* {alert ? <p>Harcama Eklendi</p> : <p>Harcama Ekle</p>} */}
 
       {/* {alert && <p>Harcama Eklendi</p>} */}
     </div>

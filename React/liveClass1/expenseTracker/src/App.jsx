@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import List from "./components/List/List";
 import Inputs from "./components/Inputs/Inputs";
+import ReactImage from "../public/maxresdefault.jpg";
 
 function App() {
   const [usernameInput, setUsernameInput] = useState("");
@@ -25,7 +26,7 @@ function App() {
   if (username === "") {
     return (
       <>
-        <img src="../public/maxresdefault.jpg" width={300} alt="" />
+        <img src={ReactImage} width={300} alt="" />
         <h3>Adını Yazın</h3>
         <input
           type="text"
