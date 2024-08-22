@@ -43,7 +43,6 @@ function App() {
   return (
     <>
       <h3>Hoşgeldin {username}</h3>
-
       <h3>Harcama Takip</h3>
       <Inputs setHarcalamalar={setHarcalamalar} />
       <hr />
