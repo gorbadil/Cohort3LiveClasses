@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Contact from "./Contact";
+import Home from "./Home";
+import About from "./About";
 
 function MainArea() {
   return (
@@ -12,11 +14,3 @@ function MainArea() {
 }
 
 export default MainArea;
-
-function Home() {
-  return <div>Home</div>;
-}
-
-function About() {
-  return <div>About</div>;
-}
