@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  padding: 20px 0;
+  background-color: hotpink;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+li {
+  cursor: pointer;
+}
+
+.main-area {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: white;
+}
