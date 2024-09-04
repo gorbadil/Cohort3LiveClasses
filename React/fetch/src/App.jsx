@@ -48,3 +48,14 @@ export default App;
 
 // const {}
 // let {}
+
+// frontend localde iken env değişken => "Hello World"
+
+// env değişken tanımlama iş
+// kodda değişken tanımlama var, const, let
+// serverda değişken tanımlama env
+
+// url değiştirmek => devops => support serverda canlıya alıcak
+// api_key => env dosyasına yazıyorum
+
+// api_key => gizli olduğundan yazıyorum
