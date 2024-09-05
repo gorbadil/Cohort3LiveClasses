@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
 import Basket from "./pages/Basket";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Products />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </>
   );
