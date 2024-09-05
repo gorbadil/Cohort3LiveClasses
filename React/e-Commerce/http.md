@@ -16,3 +16,10 @@ http, https
 
 GET / POST => Get data alır, Post data kaydeder
 POST = GET + Body(Body şifrelenir)
+Sosyal Website => GET => POST (BODY)
+
+- [PUT] /api/contacts/:id => URL: http://localhost:5000/api/contacts/1
+=> body parametre gönderme {name: 'John'} => encrypt
+=> veri güncelleme
+
+- [DELETE] /api/contacts/:id => URL: http://localhost:5000/api/contacts/1
